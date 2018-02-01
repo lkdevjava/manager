@@ -53,8 +53,10 @@
 		<property name="timeBetweenEvictionRunsMillis" value="1800000" />
 		<property name="minEvictableIdleTimeMillis" value="600000" />
 		<property name="connectionInitSqls" value="select * from dual" />
+		<!-- 
 		<property name="filters" value="filter:log4j" />
 		<property name="proxyFilters" value="" />
+		 -->
 	</bean>
 	<!-- proxyFilters: List<com.alibaba.druid.filter.Filter> -->
 
