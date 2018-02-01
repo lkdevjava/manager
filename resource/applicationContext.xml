@@ -34,8 +34,10 @@
 
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		destroy-method="close">
+		<!-- 
 		<property name="name" value="${jdbc.name}" />
-		<property name="jdbcUrl" value="${jdbc.url}" />
+		 -->
+		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.pwd}" />
 		<property name="driverClassName" value="${jdbc.driver}" />
@@ -46,13 +48,13 @@
 		<property name="useUnfairLock" value="true" />
 		<property name="poolPreparedStatements" value="false" />
 		<property name="maxOpenPreparedStatements" value="-1" />
-		<property name="validationQuery" value="select * from dual" />
+		<property name="validationQuery" value="SELECT 1 FROM DUAL" />
 		<property name="testOnBorrow" value="true" />
 		<property name="testOnReturn" value="false" />
 		<property name="testWhileIdle" value="true" />
 		<property name="timeBetweenEvictionRunsMillis" value="1800000" />
 		<property name="minEvictableIdleTimeMillis" value="600000" />
-		<property name="connectionInitSqls" value="select * from dual" />
+		<property name="connectionInitSqls" value="SELECT 1 FROM DUAL" />
 		<!-- 
 		<property name="filters" value="filter:log4j" />
 		<property name="proxyFilters" value="" />
